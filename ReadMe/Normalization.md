@@ -23,8 +23,8 @@ Ces scripts utilisent R pour effectuer des analyses sur des données de cytomét
    5.1. Assurez-vous de bien sélectionner à l'aide de la souris les cellules indiquées dans le titre du graphe biparamétrique.  
          5.1.1. Il s'agit des lymphocytes dans les scripts "Normalization NBM 13C.R" et "Normalization FU 13C.R".  
          5.1.2. Il s'agit des lymphocytes puis des cellules blastiques dans le script "Normalization DIAG 13C.R".  
-   5.2 Assurez-vous de bien sélectionner à l'aide de la souris les pics négatifs dans les histogrammes de densité.  
-       Il s'agit des pics ayant la valeur en abscisse la moins élevée, peu importe leur densité.
+   5.2. Assurez-vous de bien sélectionner à l'aide de la souris les pics négatifs dans les histogrammes de densité.   
+        Il s'agit des pics ayant la valeur en abscisse la moins élevée, peu importe leur densité.
 
 ## Sortie
 
