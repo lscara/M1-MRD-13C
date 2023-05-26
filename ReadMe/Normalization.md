@@ -20,11 +20,11 @@ Ces scripts utilisent R pour effectuer des analyses sur des données de cytomét
 3. Modifiez les paramètres des scripts selon vos besoins.
 4. Exécutez les scripts et sélectionnez vos fichiers pour effectuer les analyses sur les données de cytométrie en flux.
 5. Les scripts sont interactifs :  
-  5.1. Assurez-vous de bien sélectionner à l'aide de la souris les cellules indiquées dans le titre du graphe biparamétrique.  
-    5.1.1. Il s'agit des lymphocytes dans les scripts "Normalization NBM 13C.R" et "Normalization FU 13C.R".  
-    5.1.2. Il s'agit des lymphocytes puis des cellules blastiques dans le script "Normalization DIAG 13C.R".  
-  5.2 Assurez-vous de bien sélectionner à l'aide de la souris les pics négatifs dans les histogrammes de densité.  
-      Il s'agit des pics ayant la valeur en abscisse la moins élevée, peu importe leur densité.
+   5.1. Assurez-vous de bien sélectionner à l'aide de la souris les cellules indiquées dans le titre du graphe biparamétrique.  
+         5.1.1. Il s'agit des lymphocytes dans les scripts "Normalization NBM 13C.R" et "Normalization FU 13C.R".  
+         5.1.2. Il s'agit des lymphocytes puis des cellules blastiques dans le script "Normalization DIAG 13C.R".  
+   5.2 Assurez-vous de bien sélectionner à l'aide de la souris les pics négatifs dans les histogrammes de densité.  
+       Il s'agit des pics ayant la valeur en abscisse la moins élevée, peu importe leur densité.
 
 ## Sortie
 
