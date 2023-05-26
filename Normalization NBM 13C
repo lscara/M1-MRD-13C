@@ -1,3 +1,13 @@
+# Normalization for Flow Cytometry Data
+# Loredan Scarabello
+# 26-05-2023
+# https://github.com/lscara
+# Script adaped from https://github.com/FlowFun/M1-MRD-en-13C/blob/main/Legacy%2010C/Normalization%20NMB%2010C%20navios.R by Benoit DUPONT
+
+
+#############################
+
+
 library(flowCore)
 library(sp)
 library(Biobase)
