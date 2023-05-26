@@ -85,7 +85,7 @@ sample.name <- DF.Field [32,1]
 
 nmNBM.csv <- fsApply(flowSet.nNBM, exprs)
 
-####réduire aléatoirement le nombre de cellules de nmNBM
+####rÃ©duire alÃ©atoirement le nombre de cellules de nmNBM
 
 if(nrow(nmNBM.csv) > nmNBM.cells.final.nb){
   nmNBM.cells.final.nb.index <- sample(nrow(nmNBM.csv), nmNBM.cells.final.nb)
@@ -100,7 +100,7 @@ csv.DF <- as.data.frame(nmNBM.csv)
 csv.DF.numeric <- as.matrix(csv.DF)
 
 
-##selection du folder ou ranger les donn�es
+##selection du folder ou ranger les données
 output.folder.final <- paste0(choose.dir(), "/", "BSD Results" ,"/")
 dir.create(output.folder.final)
 
@@ -188,7 +188,7 @@ for(ben in 1 : (nb.permutation+1)){
   nodes.mapping <- fSOM[["map"]][["mapping"]][,1]
   
   layout <- fSOM[["MST"]][["l"]]
-  
+  ###construction MST
   nb.cells <- nrow(table.to.be.computed)
   node.fSOM <- vector()
   node.fSOM.x <- NULL
@@ -218,7 +218,7 @@ for(ben in 1 : (nb.permutation+1)){
     node.fSOM.y [tempo_indices] <- (random.radius*sin(random.angle))/dispersion.coef + layout.fcs[i,2]
   }
   
-  
+   ###mise à l'echelle
   xmin.graph <-  par("usr")[1]
   xmax.graph <- par("usr")[2]
   
@@ -247,8 +247,7 @@ for(ben in 1 : (nb.permutation+1)){
   
   node.fSOM.x.scaled <- matrix.node.fSOM.scaled[,1]
   node.fSOM.y.scaled <- matrix.node.fSOM.scaled[,2]
-  ####plot dev�rification
-  #plot(node.fSOM.x.scaled,node.fSOM.y.scaled, main="FlowSOM FROZEN MST layout + Vertex size")
+  ####preparation FCS
   col.of.interest <- 1:ncol(table.to.be.used.as.fcs.file)
   col.names.fcs <- colnames(table.to.be.used.as.fcs.file)
   
