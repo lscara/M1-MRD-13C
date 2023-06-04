@@ -135,7 +135,7 @@ tempo <- colnames(new_logicle)
 colnames(csv.logicle.corrected) <- c(tempo)
 
 #Création d'une colonne "TAG" 
-TAG.fcs <- rep(TAG.channel, nrow(new_logicle))
+TAG.fcs <- rep(TAG.channel, nrow(csv.logicle.corrected))
 
 #Fusion des différents objets
 csv.DF.numeric <- cbind(csv.logicle.corrected, TAG.fcs, TIME)
