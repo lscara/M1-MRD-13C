@@ -89,6 +89,7 @@ plot(new_logicle [,CD45.parameter.nb ],
 
 options(locatorBell = FALSE)
 coord <- locator(500, type="o", col="red", pch=3)
+coord.2 <- locator(500, type="o", col="red", pch=3)
 lympho.pop <- point.in.polygon (point.x = new_logicle[,CD45.parameter.nb], 
                                 point.y = new_logicle[,SSCINT.parameter.nb],
                                 pol.x = coord$x, 
@@ -143,20 +144,13 @@ tempo <- colnames(new_logicle)
 colnames(csv.logicle.corrected) <- c(tempo)
 
 #Création d'une colonne "TAG"  
-TAG.fcs <- rep(TAG.channel, nrow(new_logicle))
+TAG.fcs <- rep(TAG.channel, nrow(csv.logicle.corrected))
 
 #Fusion des différents objets
 csv.DF.numeric <- cbind(csv.logicle.corrected, TAG.fcs, TIME)
 
-#Ajouter les données à la liste
-data_list[[n]] <- csv.DF.numeric
-}
-
-#Fusionner les données en utilisant do.call() avec rbind()
-merged_data <- do.call(rbind, data_list)
-
 #Création du FCS
-dta <- merged_data
+dta <- csv.DF.numeric
 
 meta <- data.frame(name=colnames(dta),
                    desc=paste(colnames(dta))
@@ -171,6 +165,6 @@ ff <- new("flowFrame",
 )
 
 #Nom du fichier de sortie
-file_name <- paste(date, "NBM", ".fcs", sep = "_")
+file_name <- paste(date, "DIAG", ".fcs", sep = "_")
 file_name <- gsub("_\\.", ".", file_name)
 write.FCS(ff, file = file_name)
